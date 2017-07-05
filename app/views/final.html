@@ -1,0 +1,33 @@
+<div id="thankyou" class="commonDiv">
+    <div class="title">
+      Thank you
+    </div>
+   <div class="ThanksDiv">
+       <p>
+           <strong>Thank you </strong> {{UserData.FirstName}} {{UserData.LastName}}
+       </p>
+       </br>
+       <p>
+           <strong>We have recieved your order for Rs.{{UserData.totalAmount}}</strong>
+       </p>
+       </br>
+       <p>
+           <strong>We will deliver your order to the follwing address:</strong>
+       </p>
+       <p>
+           {{UserData.Address1}}</br>
+           {{UserData.Address2}}</br>
+           {{UserData.City}}</br>
+           {{UserData.State}}</br>
+           {{UserData.Pin}}</br>
+           </br>
+           </br>
+           {{UserData.Phone}}</br>
+       </p>
+   </div>
+
+</div>
+
+<div style="text-align:center;">
+    <button type="button" class="btn btn-primary" ng-click="back()">Go Back to Home</button>
+</div>

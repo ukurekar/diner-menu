@@ -1,0 +1,52 @@
+<div class="row">
+  <div id="menuDiv" class="commonDiv col-md-7 col-xs-7">
+    <div class="title">
+      Menu
+    </div>
+    <ul ng-repeat="(key,cat) in categories">
+      {{key}}
+      <table class="table">
+        <thead>
+          <td></td>
+          <td>Item Name</td>
+          <td>Price</td>
+          <td></td>
+          <td></td>
+        </thead>
+        <tr ng-repeat="item in cat">
+          <td>{{$index + 1}}</td>
+          <td>{{item.Name}}</td>
+          <td>{{item.Price}}</td>
+          <td><span class="addButton" ng-click="UserData.addOrder(item)">[<a>+</a>]</span></td>
+          <td><span class="deleteButton" ng-click="UserData.deleteOrder(item)">[<a>-</a>]</span></td>
+        </tr>
+      </table>
+    </ul>
+  </div>
+  <div class="col-xs-1"></div>
+  <div id="checkoutDiv" class="commonDiv col-xs-5">
+    <div class="title">
+      Order
+    </div>
+    <table class="table">
+        <thead>
+          <td>Item Name</td>
+          <td>Count</td>
+          <td>Amount</td>
+        </thead>
+        <tr ng-repeat="item in UserData.Order">
+          <td>{{item.Name}}</td>
+          <td>{{item.orderCount}}</td>
+            <td>Rs.{{item.orderCount * item.Price}}</td>
+            <td><span class="addButton" ng-click="UserData.addOrder(item)">[<a>+</a>]</span></td>
+            <td><span class="deleteButton" ng-click="UserData.deleteOrder(item)">[<a>-</a>]</span></td>
+        </tr>
+        <tfoot>
+          <td>Total Items</td>
+          <td>{{UserData.totalCount}}</td>
+          <td>{{UserData.totalAmount}}</td>
+        </tfoot>
+      </table>
+      <button type="button" class="btn btn-primary btn-block" ng-click="checkout()">CHECKOUT</button>
+  </div>
+</div>

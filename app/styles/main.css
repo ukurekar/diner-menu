@@ -1,0 +1,85 @@
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.marketing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+
+.header ul {
+  display: inline-flex;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+div.commonDiv {
+    background-color: #fbfbfb;
+    border-left: 2px solid #9d9d9d;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+div.commonDiv div.title {
+    margin: 15px 5px;
+    font-weight: 700;
+    /* font: status-bar; */
+    text-decoration: underline grey;
+}
+
+
+div.commonDiv .table tr td  {
+    border: none;
+}
+
+div.commonDiv .table thead {
+    border-bottom: 1px solid #ccc;
+}
+
+div.commonDiv .table tfoot {
+    font-weight: 700;
+}
+
+.addButton, .deleteButton {
+  cursor: hand;
+  cursor: pointer;
+}
+
+div#menuDiv, div#checkoutDiv {
+      height: 550px;
+}
+
+div#checkoutOrder .container-fluid, div.ThanksDiv {
+  margin-left: 15px;
+  width: 40%;
+}
+
+.navbar-right {
+  margin-right: 0px;
+}

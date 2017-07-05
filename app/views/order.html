@@ -1,0 +1,58 @@
+<div id="UserDataDetails" class="commonDiv">
+    <div class="title">
+      Checkout
+    </div>
+    <div class="container-fluid">
+        <form novalidate name="Customer" class="simple-form">
+            <table class="table">
+                <tr>
+                    <td><label>First Name: *</br><input type="text" ng-model="UserData.FirstName" name="FirstName" required/></label></td>
+                    <td><label>Last Name: </br><input type="text" ng-model="UserData.LastName" name="LastName"/></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label>Address 1: *</br><input type="text" ng-model="UserData.Address1" name="Address1" required/></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label>Address 2: </br><input type="text" ng-model="UserData.Address2" name="Address2"/></label></td>
+                </tr>
+                <tr>
+                    <td><label>City: *</br><input type="text" ng-model="UserData.City" name="City" required/></label></td>
+                    <td><label>State: *</br><input type="text" ng-model="UserData.State" name="State" required/></label></td>
+                    <td><label>Pin: *</br><input type="number" ng-model="UserData.Pin" name="Pin" ng-maxlength="6" ng-minlength="6" required/></label></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><label>Phone Number: *</br><input type="number" name="Phone" ng-model="UserData.Phone" ng-minlength="10" ng-maxlength="10" required/></label></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<div id="checkoutOrder" class="commonDiv">
+    <div class="title">
+      Order Summary
+    </div>
+    <div class="container-fluid row">
+        <table class="table">
+        <thead>
+          <td>Item Name</td>
+          <td>Count</td> 
+          <td>Amount</td>
+        </thead>
+        <tr ng-repeat="item in UserData.Order">
+          <td>{{item.Name}}</td>
+          <td>{{item.orderCount}}</td> 
+            <td>Rs.{{item.orderCount * item.Price}}</td>
+            <td><span class="addButton" ng-click="UserData.addOrder(item)">[<a>+</a>]</span></td>
+            <td><span class="deleteButton" ng-click="UserData.deleteOrder(item)">[<a>-</a>]</span></td>
+        </tr>
+        <tfoot>
+          <td>Total Items</td>
+          <td>{{UserData.totalCount}}</td> 
+          <td>{{UserData.totalAmount}}</td>
+        </tfoot>
+      </table>
+    </div>
+</div>
+<div style="text-align:center;">
+    <button style="margin:auto;" type="button" ng-disabled="Customer.FirstName != '' && Customer.FirstName.$invalid ||Customer.Address1 != '' && Customer.Address1.$invalid|| Customer.City != '' && Customer.City.$invalid || Customer.State!='' && Customer.State.$invalid || Customer.Pin != '' && Customer.Pin.$invalid || Customer.Phone != '' && Customer.Phone.$invalid && UserData.Order.length === 0" class="btn btn-primary" ng-click="proceed()">CONFIRM ORDER</button>
+</div>
