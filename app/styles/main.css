@@ -11,9 +11,10 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
   width: 100%;
+}
+.header ul {
+  display: inline-flex;
 }
 
 /* Main marketing message and sign up button */
@@ -26,21 +27,18 @@ body {
   padding: 14px 24px;
 }
 
-
-.header ul {
-  display: inline-flex;
-}
-
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
+    margin: 0;
 }
 
 div.commonDiv {
     background-color: #fbfbfb;
+    border: 1px solid #eeeeee;
+    padding-left: 16px;
     border-left: 2px solid #9d9d9d;
     overflow-y: auto;
     margin-bottom: 10px;
@@ -66,16 +64,20 @@ div.commonDiv .table tfoot {
     font-weight: 700;
 }
 
-.addButton, .deleteButton {
+.addButton,
+.deleteButton {
   cursor: hand;
   cursor: pointer;
 }
 
-div#menuDiv, div#checkoutDiv {
-      height: 550px;
+div#menuDiv,
+div#checkoutDiv {
+  height: 550px;
+  border: 1px solid #eeeeee;
 }
 
-div#checkoutOrder .container-fluid, div.ThanksDiv {
+div#checkoutOrder .container-fluid,
+div.ThanksDiv {
   margin-left: 15px;
   width: 40%;
 }
