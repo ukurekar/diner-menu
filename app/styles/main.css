@@ -37,7 +37,6 @@ input[type=number]::-webkit-outer-spin-button {
 
 div.commonDiv {
     background-color: #fbfbfb;
-    border: 1px solid #eeeeee;
     padding-left: 16px;
     border-left: 2px solid #9d9d9d;
     overflow-y: auto;
@@ -73,7 +72,11 @@ div.commonDiv .table tfoot {
 div#menuDiv,
 div#checkoutDiv {
   height: 550px;
-  border: 1px solid #eeeeee;
+  border-left: 2px solid #9d9d9d
+}
+
+div#menuDiv {
+  margin-right: 16px;
 }
 
 div#checkoutOrder .container-fluid,
